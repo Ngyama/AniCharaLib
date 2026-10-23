@@ -1,0 +1,25 @@
+# Local development database only. Data lives in the Docker volume "anicharalib_pgdata"
+# on each machine and is never committed; rebuild it any time with  .\dev.cmd reset
+name: anicharalib
+
+services:
+  db:
+    image: postgres:17
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-anichara}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-anichara}
+      POSTGRES_DB: ${POSTGRES_DB:-anichara}
+    ports:
+      # Bound to localhost only, so the database is not reachable from the network.
+      - "127.0.0.1:${POSTGRES_PORT:-5432}:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      interval: 3s
+      timeout: 3s
+      retries: 20
+
+volumes:
+  pgdata:

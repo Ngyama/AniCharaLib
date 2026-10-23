@@ -1,0 +1,83 @@
+# Demo works. All titles and characters are fictional and made up for this project.
+# work_type: anime | visual_novel | manga | light_novel | game | novel | other
+
+works:
+  - key: hoshimizaka-vn
+    title: 星见坂的星盘
+    title_original: 星見坂のアストロラーベ
+    title_en: Astrolabe of Hoshimizaka
+    work_type: visual_novel
+    release_year: 2021
+    summary: >-
+      海边小镇星见坂的天文部即将废部。转学回故乡的少年与几位性格迥异的少女，
+      为了在流星雨之夜完成一张星图而重新聚在一起。校园恋爱视觉小说。
+
+  - key: hoshimizaka-anime
+    title: 星见坂的星盘 -Twilight Orbit-
+    title_original: 星見坂のアストロラーベ -Twilight Orbit-
+    title_en: "Astrolabe of Hoshimizaka: Twilight Orbit"
+    work_type: anime
+    release_year: 2023
+    summary: >-
+      同名视觉小说的 TV 动画改编，以群像剧形式重新讲述天文部的一年，并加入了动画原创角色。
+
+  - key: silver-wing-ln
+    title: 银翼魔女与灰色王国
+    title_original: 銀翼の魔女と灰色の王国
+    title_en: The Silver-winged Witch and the Grey Kingdom
+    work_type: light_novel
+    release_year: 2019
+    summary: >-
+      被放逐的王女魔女与沉默的骑士，在失去色彩的王国中追寻古龙留下的预言。奇幻冒险轻小说。
+
+  - key: silver-wing-manga
+    title: 银翼魔女与灰色王国（漫画版）
+    title_original: 銀翼の魔女と灰色の王国（コミック版）
+    work_type: manga
+    release_year: 2020
+    summary: 轻小说《银翼魔女与灰色王国》的漫画改编，追加了龙族少女诺瓦的日常番外。
+
+  - key: amayadori-cafe
+    title: 雨宿咖啡馆
+    title_original: 雨宿り喫茶
+    title_en: Amayadori Café
+    work_type: manga
+    release_year: 2022
+    summary: >-
+      只在下雨天开门的小咖啡馆，以及聚在那里的店主、打工的高中生和常客们。治愈系日常漫画。
+
+  - key: arc-seven
+    title: 机甲少女战线 ARC-7
+    title_original: 機甲少女戦線 ARC-7
+    title_en: "Armored Front ARC-7"
+    work_type: anime
+    release_year: 2024
+    summary: >-
+      在被雾霭覆盖的未来都市，驾驶实验机体的少女们与失控的自律兵器作战。原创机甲动画。
+
+  - key: senya-kogetsu
+    title: 千夜狐月抄
+    title_original: 千夜狐月抄
+    title_en: Thousand Nights of the Fox Moon
+    work_type: visual_novel
+    release_year: 2018
+    summary: >-
+      山间神社的见习巫女与沉睡千年的狐妖缔结了契约。和风传奇视觉小说。
+
+  - key: seventh-library
+    title: 第七图书馆的守夜人
+    title_original: 第七図書館の夜番
+    title_en: The Night Keeper of the Seventh Library
+    work_type: light_novel
+    release_year: 2020
+    summary: >-
+      午夜之后才会出现的第七图书馆里，住着一位只读不写的少女侦探。图书馆推理轻小说。
+
+  - key: after-school-ensemble
+    title: 放课后合奏团
+    title_original: 放課後アンサンブル
+    title_en: After School Ensemble
+    work_type: game
+    release_year: 2025
+    summary: >-
+      以组建校园乐队为主题的音乐节奏游戏，曾与《星见坂的星盘》动画进行联动。

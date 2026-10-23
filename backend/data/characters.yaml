@@ -1,0 +1,487 @@
+# Demo characters. Everything here is fictional.
+#
+# name:        primary display name (stored on the character, also indexed as a zh name)
+# names:       other names by language — zh | ja | en | romaji | other
+# aliases:     nicknames / alternative names, each with a language
+# birthday:    "MM-DD"
+# works:       work key + role (main | supporting | minor | cameo)
+# attributes:  attribute keys from attributes.yaml
+
+characters:
+  # ── 星见坂的星盘 ─────────────────────────────────────────────
+  - key: haruno-sakurano
+    name: 春野樱乃
+    names: {ja: 春野桜乃, romaji: Haruno Sakurano, en: Sakurano Haruno}
+    aliases:
+      - {name: 小樱, language: zh}
+      - {name: さくちゃん, language: ja}
+    gender: female
+    birthday: "04-03"
+    age: "16"
+    height_cm: 148
+    blood_type: A
+    summary: 天文部唯一的一年级部员，害怕黑暗却喜欢星星。说话声音很小，总是跟在青梅竹马身后。
+    works:
+      - {work: hoshimizaka-vn, role: main}
+      - {work: hoshimizaka-anime, role: main}
+    attributes:
+      [pink-hair, long-hair, twin-tails, blunt-bangs, ahoge, blue-eyes, round-eyes, tareme,
+       petite, short-stature, fair-skin, hair-ribbon, school-uniform, sailor-uniform,
+       pleated-skirt, thigh-highs, black-stockings, zettai-ryouiki, loafers, teen-looking,
+       youthful, cute-style, weak-willed, shy, timid, gentle, introverted, crybaby, imouto,
+       student, kouhai, childhood-friend, likes-sweets]
+
+  - key: himura-akane
+    name: 绯村茜
+    names: {ja: 緋村茜, romaji: Himura Akane, en: Akane Himura}
+    gender: female
+    birthday: "11-21"
+    age: "17"
+    height_cm: 156
+    blood_type: O
+    summary: 外表凌厉的吊眼少女，实际上非常没有自信，被人搭话就会慌张。料理是她唯一的骄傲。
+    works:
+      - {work: hoshimizaka-vn, role: main}
+      - {work: hoshimizaka-anime, role: main}
+    attributes:
+      [red-hair, long-hair, twin-tails, side-swept-bangs, yellow-eyes, tsurime, slender,
+       school-uniform, sailor-uniform, miniskirt, knee-socks, white-stockings, loafers,
+       hair-clip, teen-looking, weak-willed, insecure, low-self-esteem, sensitive, dependent,
+       dandere, student, good-cook]
+
+  - key: tsukishiro-shiori
+    name: 月城诗织
+    names: {ja: 月城詩織, romaji: Tsukishiro Shiori, en: Shiori Tsukishiro}
+    aliases:
+      - {name: 会长, language: zh}
+      - {name: 生徒会長, language: ja}
+    gender: female
+    birthday: "01-15"
+    age: "18"
+    height_cm: 167
+    blood_type: AB
+    summary: 学生会长兼天文部名誉部长。成绩与家世都无可挑剔，说话却一针见血，几乎没人敢反驳她。
+    works:
+      - {work: hoshimizaka-vn, role: main}
+      - {work: hoshimizaka-anime, role: main}
+    attributes:
+      [black-hair, very-long-hair, hime-cut, blunt-bangs, straight-hair, purple-eyes, tsurime,
+       beauty-mark, slender, tall, long-legs, fair-skin, hairband, school-uniform,
+       sailor-uniform, long-skirt, pantyhose, black-stockings, loafers, teen-looking,
+       refined, elegant, mature-look, aloof, serious, sharp-tongued, proud, calm, ojousama,
+       kuudere, student, student-council, senpai, likes-reading, genius]
+
+  - key: hoshino-takumi
+    name: 星野拓海
+    names: {ja: 星野拓海, romaji: Hoshino Takumi, en: Takumi Hoshino}
+    gender: male
+    birthday: "08-12"
+    age: "17"
+    height_cm: 172
+    blood_type: A
+    summary: 时隔七年转学回星见坂的主人公。性格温和、责任感强，为了守住天文部而四处奔走。
+    works:
+      - {work: hoshimizaka-vn, role: main}
+      - {work: hoshimizaka-anime, role: main}
+    attributes:
+      [brown-hair, short-hair, messy-hair, brown-eyes, average-build, school-uniform, shirt,
+       trousers, sneakers, teen-looking, gentle, serious, responsible, calm, student,
+       transfer-student, childhood-friend, good-cook]
+
+  - key: yuzuki-mahiru
+    name: 柚木真昼
+    names: {ja: 柚木真昼, romaji: Yuzuki Mahiru, en: Mahiru Yuzuki}
+    gender: female
+    birthday: "06-30"
+    age: "16"
+    height_cm: 145
+    summary: 动画原创角色。隔壁田径部的王牌，嘴上说讨厌天文部，却每天都来部室报到。
+    works:
+      - {work: hoshimizaka-anime, role: supporting}
+    attributes:
+      [pink-hair, medium-hair, twin-tails, yellow-eyes, tsurime, snaggletooth, petite,
+       short-stature, scrunchie, school-uniform, sailor-uniform, miniskirt, knee-socks,
+       sneakers, teen-looking, cute-style, tsundere, assertive, extroverted, proud,
+       hot-blooded, student, rival, athletic]
+
+  - key: shiratori-rena
+    name: 白鸟玲奈
+    names: {ja: 白鳥玲奈, romaji: Shiratori Rena, en: Rena Shiratori}
+    gender: female
+    birthday: "12-24"
+    age: "27"
+    height_cm: 170
+    blood_type: B
+    summary: 天文部的顾问老师。上课时总在打瞌睡，关键时刻却意外地可靠。
+    works:
+      - {work: hoshimizaka-vn, role: supporting}
+      - {work: hoshimizaka-anime, role: supporting}
+    attributes:
+      [silver-hair, long-hair, ponytail, grey-eyes, tareme, voluptuous, tall, glasses, suit,
+       shirt, pantyhose, black-stockings, high-heels, adult-looking, mature-look,
+       seductive, lazy, gentle, mysterious, onee-san, teacher, likes-cats, sleepyhead]
+
+  # ── 银翼魔女与灰色王国 ──────────────────────────────────────
+  - key: alicia-silberflugel
+    name: 艾莉西亚·冯·银翼
+    names: {ja: アリシア・フォン・ジルバーフリューゲル, en: Alicia von Silberflügel}
+    aliases:
+      - {name: 银翼魔女, language: zh}
+      - {name: 銀翼の魔女, language: ja}
+      - {name: Silver Witch, language: en}
+    gender: female
+    birthday: "02-29"
+    age: "19"
+    height_cm: 158
+    summary: 被逐出王都的第三王女，王国最后的魔女。高傲又嘴硬，却会为了素不相识的村民赌上性命。
+    works:
+      - {work: silver-wing-ln, role: main}
+      - {work: silver-wing-manga, role: main}
+    attributes:
+      [silver-hair, very-long-hair, straight-hair, heterochromia, blue-eyes, red-eyes,
+       tsurime, slender, fair-skin, witch-hat, cape, dress, long-sleeves, gloves, choker,
+       long-boots, elegant, cool-style, arrogant, proud, sharp-tongued, mysterious, tsundere,
+       ojousama, mage, royalty, human, magic, genius, likes-sweets, master-servant]
+
+  - key: lilian
+    name: 莉莉安
+    names: {ja: リリアン, en: Lilian}
+    gender: female
+    age: "外表 20 / 实际 214"
+    height_cm: 171
+    summary: 森林精灵的弓手，旅途中的大姐姐。总是笑眯眯的，生气时比谁都可怕。
+    works:
+      - {work: silver-wing-ln, role: supporting}
+      - {work: silver-wing-manga, role: supporting}
+    attributes:
+      [blonde-hair, long-hair, braid, green-eyes, narrow-eyes, long-ears, pointy-ears, slender,
+       tall, long-legs, fair-skin, flower-ornament, cape, hot-pants, thigh-highs, long-boots,
+       fingerless-gloves, gloves, young-adult-looking, elegant, cheerful, gentle, extroverted,
+       onee-san, elf, adventurer, healing, gardening]
+
+  - key: grey-ash
+    name: 格雷·亚修
+    names: {ja: グレイ・アッシュ, en: Grey Ash}
+    gender: male
+    birthday: "10-02"
+    age: "24"
+    height_cm: 186
+    blood_type: O
+    summary: 守护魔女的骑士，话很少。左脸的旧伤来自他还属于王国骑士团的时代。
+    works:
+      - {work: silver-wing-ln, role: main}
+      - {work: silver-wing-manga, role: main}
+    attributes:
+      [grey-hair, short-hair, grey-eyes, sanpaku, facial-scar, muscular, tall, tan-skin,
+       armor, cape, gloves, long-boots, carries-sword, adult-looking, cool-style, serious,
+       aloof, responsible, stubborn, mukuchi, knight, human, swordsmanship, master-servant]
+
+  - key: nova
+    name: 诺瓦
+    names: {ja: ノヴァ, en: Nova}
+    aliases:
+      - {name: 小龙, language: zh}
+    gender: female
+    age: "外表 10 / 实际 1000 以上"
+    height_cm: 132
+    summary: 古龙的幼体，化作人形跟在魔女身边。贪吃、黏人，对主人以外的人毫不客气。
+    works:
+      - {work: silver-wing-ln, role: minor}
+      - {work: silver-wing-manga, role: supporting}
+    attributes:
+      [light-blue-hair, medium-hair, wavy-hair, ahoge, yellow-eyes, slit-pupils, fangs, horns,
+       tail, wings, scales, petite, short-stature, dress, sleeveless, barefoot, child-looking,
+       youthful, cute-style, cheerful, mischievous, dependent, possessive, genki, imouto,
+       dragon, superhuman-strength, likes-sweets]
+
+  - key: viktor-nowak
+    name: 维克托·诺瓦克
+    names: {ja: ヴィクトル・ノヴァク, en: Viktor Nowak}
+    gender: male
+    age: "外表 30 / 实际不明"
+    height_cm: 184
+    summary: 灰色王国的宰相，真实身份是活了数百年的吸血鬼。总是彬彬有礼地微笑着。
+    works:
+      - {work: silver-wing-ln, role: supporting}
+    attributes:
+      [black-hair, long-hair, ponytail, red-eyes, glowing-eyes, fangs, slender, tall,
+       fair-skin, coat, high-collar, long-sleeves, gloves, monocle, adult-looking, elegant,
+       seductive, arrogant, mysterious, calm, haraguro, vampire, royalty, magic]
+
+  # ── 雨宿咖啡馆 ──────────────────────────────────────────────
+  - key: amamiya-shiori
+    name: 雨宫栞
+    names: {ja: 雨宮栞, romaji: Amamiya Shiori, en: Shiori Amamiya}
+    gender: female
+    birthday: "06-11"
+    age: "26"
+    height_cm: 162
+    blood_type: A
+    summary: 雨宿咖啡馆的店主。泡得一手好红茶，会记住每位常客喜欢的点心。
+    works:
+      - {work: amayadori-cafe, role: main}
+    attributes:
+      [brown-hair, medium-hair, side-ponytail, hair-tie, brown-eyes, tareme, beauty-mark,
+       average-build, sweater, long-skirt, apron, adult-looking, mature-look, refined, gentle,
+       calm, cheerful, onee-san, shopkeeper, good-cook, tea-lover, older-sister]
+
+  - key: takanashi-sumire
+    name: 小鸟游堇
+    names: {ja: 小鳥遊菫, romaji: Takanashi Sumire, en: Sumire Takanashi}
+    aliases:
+      - {name: 小堇, language: zh}
+    gender: female
+    birthday: "03-08"
+    age: "16"
+    height_cm: 150
+    summary: 在咖啡馆打工的高中生。被客人搭话就会躲到托盘后面，但会默默记下所有人的点单习惯。
+    works:
+      - {work: amayadori-cafe, role: main}
+    attributes:
+      [purple-hair, short-hair, bob-cut, hair-over-eyes, grey-eyes, glasses, petite,
+       school-uniform, blazer-uniform, cardigan, oversized-sleeves, pleated-skirt, pantyhose,
+       black-stockings, apron, teen-looking, cute-style, introverted, shy, timid, weak-willed,
+       obedient, gentle, dandere, student, kouhai, likes-reading, likes-cats]
+
+  - key: kurosawa-jin
+    name: 黑泽阵
+    names: {ja: 黒沢陣, romaji: Kurosawa Jin, en: Jin Kurosawa}
+    gender: male
+    birthday: "09-09"
+    age: "25"
+    height_cm: 181
+    summary: 每逢雨天必来的常客，看起来像不良，其实是附近出版社的编辑。只点黑咖啡。
+    works:
+      - {work: amayadori-cafe, role: supporting}
+    attributes:
+      [black-hair, medium-hair, center-parted, black-eyes, tsurime, sanpaku, slender, tall,
+       ear-studs, tattoo, jacket, t-shirt, trousers, ankle-boots, necklace, adult-looking,
+       cool-style, delinquent-look, aloof, sharp-tongued, gentle, loner, office-worker]
+
+  - key: amamiya-minato
+    name: 雨宫湊
+    names: {ja: 雨宮湊, romaji: Amamiya Minato, en: Minato Amamiya}
+    gender: male
+    birthday: "07-07"
+    age: "11"
+    height_cm: 139
+    summary: 店主的弟弟，小学五年级。放学后在店里写作业、偷吃蛋糕，是常客们的开心果。
+    works:
+      - {work: amayadori-cafe, role: supporting}
+    attributes:
+      [brown-hair, short-hair, ahoge, brown-eyes, round-eyes, petite, short-stature, hoodie,
+       shorts, sneakers, backpack, child-looking, youthful, cheerful, mischievous, extroverted,
+       student, gamer, likes-sweets, younger-brother]
+
+  # ── 机甲少女战线 ARC-7 ──────────────────────────────────────
+  - key: zero-elle
+    name: 零式·艾尔
+    names: {ja: ゼロシキ・エル, en: Type-Zero Elle}
+    aliases:
+      - {name: ELLE-00, language: other}
+    gender: female
+    age: "制造后 2 年"
+    height_cm: 154
+    summary: 为驾驶实验机体 ARC-7 而制造的人造人。几乎不表露感情，只对指挥官的命令有反应。
+    works:
+      - {work: arc-seven, role: main}
+    attributes:
+      [white-hair, medium-hair, straight-hair, blunt-bangs, blue-eyes, special-pupils,
+       glowing-eyes, slender, unusual-skin, mechanical-limbs, special-patterns, headphones,
+       battle-suit, long-sleeves, teen-looking, androgynous, cool-style, aloof, obedient,
+       serious, sanmu, mukuchi, kuudere, android, soldier, hacker, superhuman-strength]
+
+  - key: karen-stratos
+    name: 卡莲·斯特拉托斯
+    names: {ja: カレン・ストラトス, en: Karen Stratos}
+    gender: female
+    birthday: "05-05"
+    age: "17"
+    height_cm: 165
+    blood_type: B
+    summary: 王牌驾驶员，冲在最前面的那种人。把新来的人造人当作对手，也当作搭档。
+    works:
+      - {work: arc-seven, role: main}
+    attributes:
+      [red-hair, short-hair, messy-hair, green-eyes, tsurime, freckles, slender, tan-skin,
+       military-uniform, jacket, fingerless-gloves, gloves, long-boots, teen-looking,
+       cool-style, hot-blooded, assertive, extroverted, stubborn, cheerful, genki, soldier,
+       athletic, rival]
+
+  - key: han-ye
+    name: 韩夜
+    names: {ja: ハン・イェ, romaji: Han Ye, en: Han Ye}
+    aliases:
+      - {name: 司令, language: zh}
+    gender: male
+    birthday: "12-01"
+    age: "34"
+    height_cm: 183
+    summary: 第七实验部队的司令官，在过去的战斗中失去了右眼。没人知道他真正的目的。
+    works:
+      - {work: arc-seven, role: supporting}
+    attributes:
+      [blue-hair, short-hair, grey-eyes, one-eyed, eyepatch, facial-scar, tall,
+       military-uniform, coat, gloves, long-boots, adult-looking, mature-look, cool-style,
+       calm, serious, mysterious, haraguro, soldier, human]
+
+  - key: tachibana-aoi
+    name: 橘葵
+    names: {ja: 橘葵, romaji: Tachibana Aoi, en: Aoi Tachibana}
+    aliases:
+      - {name: 小葵, language: zh}
+    gender: female
+    birthday: "08-01"
+    age: "15"
+    height_cm: 147
+    summary: 部队里最年轻的机械师。手很巧，胆子却很小，一挨骂就会哭出来。
+    works:
+      - {work: arc-seven, role: supporting}
+    attributes:
+      [orange-hair, medium-hair, twin-tails, yellow-eyes, star-pupils, freckles, petite,
+       short-stature, goggles, jacket, shorts, gloves, bandages, sneakers, teen-looking,
+       youthful, cute-style, weak-willed, crybaby, gentle, cheerful, tennen, engineer,
+       genius]
+
+  # ── 千夜狐月抄 ──────────────────────────────────────────────
+  - key: kujou-kuzunoha
+    name: 九条葛叶
+    names: {ja: 九条葛葉, romaji: Kujou Kuzunoha, en: Kuzunoha Kujou}
+    aliases:
+      - {name: 狐月大人, language: zh}
+      - {name: 狐月様, language: ja}
+    gender: female
+    age: "外表 20 / 实际 800 以上"
+    height_cm: 168
+    summary: 被封印在神社里的九尾狐。醒来后宣称见习巫女是自己的所有物，喜欢捉弄人。
+    works:
+      - {work: senya-kogetsu, role: main}
+    attributes:
+      [blonde-hair, very-long-hair, hime-cut, fox-ears, animal-ears, yellow-eyes, slit-pupils,
+       tsurime, tail, voluptuous, fair-skin, kimono, bare-shoulders, long-sleeves,
+       flower-ornament, geta, young-adult-looking, seductive, elegant, mature-look,
+       mysterious, arrogant, possessive, mischievous, haraguro, onee-san, youkai, magic,
+       precognition, tea-lover]
+
+  - key: kagurazaka-yui
+    name: 神乐坂结衣
+    names: {ja: 神楽坂結衣, romaji: Kagurazaka Yui, en: Yui Kagurazaka}
+    gender: female
+    birthday: "01-01"
+    age: "17"
+    height_cm: 160
+    blood_type: A
+    summary: 神社的见习巫女，认真到有些死板。和狐妖的契约让她的日常彻底乱了套。
+    works:
+      - {work: senya-kogetsu, role: main}
+    attributes:
+      [black-hair, long-hair, ponytail, hair-ribbon, brown-eyes, round-eyes, slender,
+       miko-outfit, long-sleeves, geta, teen-looking, refined, serious, gentle, responsible,
+       stubborn, shrine-maiden, student, human, swordsmanship, childhood-friend]
+
+  - key: yayoi
+    name: 夜宵
+    names: {ja: 弥宵, romaji: Yayoi, en: Yayoi}
+    gender: female
+    age: "不明"
+    height_cm: 142
+    summary: 住在神社后山的猫又。粘着巫女不放，谁接近巫女就会露出很可怕的笑容。
+    works:
+      - {work: senya-kogetsu, role: supporting}
+    attributes:
+      [pink-hair, black-hair, two-tone-hair, long-hair, side-ponytail, cat-ears, animal-ears,
+       red-eyes, heart-pupils, tail, petite, short-stature, gothic-lolita, choker,
+       thigh-highs, white-stockings, mary-janes, teen-looking, cute-style, gloomy-look,
+       introverted, possessive, dependent, sensitive, yandere, youkai]
+
+  # ── 第七图书馆的守夜人 ──────────────────────────────────────
+  - key: lei-metis
+    name: 黎·墨提斯
+    names: {ja: レイ・メティス, en: Lei Metis}
+    gender: female
+    age: "不明"
+    height_cm: 155
+    summary: 第七图书馆的“守夜人”，其实是早已过世的少女的幽灵。只靠阅读便能推理出真相。
+    works:
+      - {work: seventh-library, role: main}
+    attributes:
+      [green-hair, very-long-hair, braid, green-eyes, jitome, glasses, slender, fair-skin,
+       dress, cardigan, long-sleeves, pantyhose, black-stockings, teen-looking, sickly,
+       refined, gloomy-look, introverted, sharp-tongued, lazy, loner, calm, mukuchi,
+       detective, ghost, genius, likes-reading, tea-lover, sleepyhead]
+
+  - key: alvin-cross
+    name: 阿尔文·克罗斯
+    names: {ja: アルヴィン・クロス, en: Alvin Cross}
+    gender: male
+    birthday: "04-22"
+    age: "16"
+    height_cm: 163
+    summary: 唯一能看见守夜人的少年，被迫成为侦探助手。乐天派，经常被毒舌打击得眼泪汪汪。
+    works:
+      - {work: seventh-library, role: main}
+    attributes:
+      [blonde-hair, short-hair, wavy-hair, blue-eyes, round-eyes, average-build, vest, shirt,
+       bowtie, trousers, loafers, teen-looking, cute-style, androgynous, cheerful,
+       extroverted, gentle, crybaby, tennen, student, human]
+
+  - key: nameless-wanderer
+    name: 无名旅人
+    names: {en: The Nameless Wanderer}
+    gender: unknown
+    summary: 偶尔出现在图书馆的神秘访客。没人见过兜帽下的脸，资料几乎为空白。
+    works:
+      - {work: seventh-library, role: minor}
+    attributes: [hood, mask, face-covered, cape, mysterious]
+
+  # ── 放课后合奏团 ────────────────────────────────────────────
+  - key: nanami-otoha
+    name: 七海音羽
+    names: {ja: 七海音羽, romaji: Nanami Otoha, en: Otoha Nanami}
+    aliases:
+      - {name: 音羽酱, language: zh}
+    gender: female
+    birthday: "07-20"
+    age: "16"
+    height_cm: 152
+    blood_type: O
+    summary: 乐队主唱，梦想是站上武道馆的舞台。在联动活动中造访过星见坂天文部。
+    works:
+      - {work: after-school-ensemble, role: main}
+      - {work: hoshimizaka-anime, role: cameo}
+    attributes:
+      [light-blue-hair, gradient-hair, long-hair, twin-tails, blue-eyes, star-pupils, petite,
+       headband, hair-ribbon, dress, detached-sleeves, thigh-highs, white-stockings,
+       striped-socks, mary-janes, teen-looking, cute-style, cheerful, extroverted,
+       hot-blooded, genki, boku-girl, idol, student, musical]
+
+  - key: hiiragi-rin
+    name: 柊凛
+    names: {ja: 柊凛, romaji: Hiiragi Rin, en: Rin Hiiragi}
+    gender: female
+    birthday: "02-14"
+    age: "17"
+    height_cm: 168
+    summary: 乐队吉他手，独来独往的高年级生。挑染的红发和耳钉让她在学校里格外显眼。
+    works:
+      - {work: after-school-ensemble, role: main}
+    attributes:
+      [black-hair, red-hair, streaked-hair, short-hair, messy-hair, red-eyes, tsurime, sanpaku,
+       slender, tall, ear-studs, earrings, choker, jacket, t-shirt, shorts, fishnets,
+       ankle-boots, teen-looking, androgynous, cool-style, delinquent-look, aloof, assertive,
+       sharp-tongued, loner, kuudere, student, senpai, rival, musical]
+
+  - key: chihaya-tsubasa
+    name: 千早翼
+    names: {ja: 千早翼, romaji: Chihaya Tsubasa, en: Tsubasa Chihaya}
+    gender: male
+    birthday: "03-27"
+    age: "16"
+    height_cm: 177
+    summary: 乐队鼓手，体育万能的热血笨蛋。上课睡觉，练习时却比谁都认真。
+    works:
+      - {work: after-school-ensemble, role: supporting}
+    attributes:
+      [orange-hair, short-hair, messy-hair, yellow-eyes, snaggletooth, muscular, tall, hoodie,
+       shorts, sneakers, wristband, teen-looking, hot-blooded, cheerful, extroverted, lazy,
+       student, athletic, musical, gamer, sleepyhead]

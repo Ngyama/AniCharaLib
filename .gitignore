@@ -1,0 +1,33 @@
+# Local configuration and secrets (copy .env.example to .env)
+.env
+.env.*
+!.env.example
+backend/.env
+
+# Local database data is kept in the Docker volume; never commit dumps either
+*.dump
+*.sql.gz
+pgdata/
+
+# Claude Code local settings
+.claude/settings.local.json
+
+# Python
+backend/.venv/
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Node / Vite
+frontend/node_modules/
+frontend/dist/
+*.tsbuildinfo
+frontend/.env.local
+
+# Editors / OS
+.vscode/*
+!.vscode/extensions.json
+.idea/
+Thumbs.db
+.DS_Store

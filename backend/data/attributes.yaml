@@ -1,0 +1,625 @@
+# Attribute dictionary: category (一级分类) → group (二级分类) → attribute (可检索标签).
+#
+# - Keys are stable identifiers used in URLs and seed files; never rename them casually.
+# - domain: appearance | personality | other — decides the section on the character page.
+# - featured: true on a group shows its attributes on character cards.
+# - swatch: optional display colour (hair / eye / skin colour).
+# - parent: optional key of a broader attribute (informational only; search does not expand it).
+# - Order in this file is the display order.
+#
+# Run `python -m app.seed` after editing; the frontend picks up changes automatically.
+
+categories:
+  # ───────────────────────────── 外观 ─────────────────────────────
+  - key: hair
+    domain: appearance
+    zh: 头发
+    ja: 髪
+    en: Hair
+    groups:
+      - key: hair-color
+        zh: 发色
+        ja: 髪色
+        en: Hair Color
+        featured: true
+        attributes:
+          - {key: black-hair, zh: 黑发, ja: 黒髪, en: Black Hair, swatch: "#2c2c33"}
+          - {key: white-hair, zh: 白发, ja: 白髪, en: White Hair, swatch: "#f1efe9"}
+          - {key: silver-hair, zh: 银发, ja: 銀髪, en: Silver Hair, swatch: "#c5c9d2"}
+          - {key: grey-hair, zh: 灰发, ja: 灰色の髪, en: Grey Hair, swatch: "#8e9096"}
+          - {key: blonde-hair, zh: 金发, ja: 金髪, en: Blonde Hair, swatch: "#e6cc7c"}
+          - {key: brown-hair, zh: 棕发, ja: 茶髪, en: Brown Hair, swatch: "#8b5d40"}
+          - {key: red-hair, zh: 红发, ja: 赤髪, en: Red Hair, swatch: "#c4453f"}
+          - {key: orange-hair, zh: 橙发, ja: オレンジ髪, en: Orange Hair, swatch: "#e38d4f"}
+          - {key: pink-hair, zh: 粉发, ja: ピンク髪, en: Pink Hair, swatch: "#eda3bf"}
+          - {key: blue-hair, zh: 蓝发, ja: 青髪, en: Blue Hair, swatch: "#5b82c4"}
+          - {key: light-blue-hair, zh: 浅蓝发, ja: 水色髪, en: Light Blue Hair, swatch: "#9ccbe5"}
+          - {key: green-hair, zh: 绿发, ja: 緑髪, en: Green Hair, swatch: "#6aa47c"}
+          - {key: purple-hair, zh: 紫发, ja: 紫髪, en: Purple Hair, swatch: "#8b6cb6"}
+          - {key: two-tone-hair, zh: 双色发, ja: ツートンカラー, en: Two-tone Hair}
+          - {key: gradient-hair, zh: 渐变发, ja: グラデーションヘア, en: Gradient Hair}
+          - {key: streaked-hair, zh: 挑染, ja: メッシュ, en: Streaked Hair}
+      - key: hair-length
+        zh: 发长
+        ja: 髪の長さ
+        en: Hair Length
+        attributes:
+          - {key: bald, zh: 光头, ja: スキンヘッド, en: Bald}
+          - {key: very-short-hair, zh: 超短发, ja: ベリーショート, en: Very Short Hair}
+          - {key: short-hair, zh: 短发, ja: ショートヘア, en: Short Hair}
+          - {key: medium-hair, zh: 中发, ja: ミディアムヘア, en: Medium Hair}
+          - {key: long-hair, zh: 长发, ja: ロングヘア, en: Long Hair}
+          - {key: very-long-hair, zh: 超长发, ja: スーパーロング, en: Very Long Hair}
+      - key: hairstyle
+        zh: 发型
+        ja: 髪型
+        en: Hairstyle
+        featured: true
+        attributes:
+          - {key: ponytail, zh: 单马尾, ja: ポニーテール, en: Ponytail}
+          - {key: twin-tails, zh: 双马尾, ja: ツインテール, en: Twin Tails}
+          - {key: side-ponytail, zh: 侧马尾, ja: サイドポニーテール, en: Side Ponytail}
+          - {key: braid, zh: 麻花辫, ja: 三つ編み, en: Braid}
+          - {key: twin-braids, zh: 双辫, ja: おさげ, en: Twin Braids}
+          - {key: hair-bun, zh: 丸子头, ja: お団子, en: Hair Bun}
+          - {key: hime-cut, zh: 姬发式, ja: 姫カット, en: Hime Cut}
+          - {key: bob-cut, zh: 波波头, ja: ボブカット, en: Bob Cut}
+          - {key: half-up, zh: 公主头, ja: ハーフアップ, en: Half Up}
+          - {key: drill-hair, zh: 螺旋卷, ja: 縦ロール, en: Drill Hair}
+      - key: bangs-texture
+        zh: 刘海与发质
+        ja: 前髪・髪質
+        en: Bangs & Texture
+        attributes:
+          - {key: blunt-bangs, zh: 齐刘海, ja: ぱっつん前髪, en: Blunt Bangs}
+          - {key: side-swept-bangs, zh: 斜刘海, ja: 流し前髪, en: Side-swept Bangs}
+          - {key: hair-over-eyes, zh: 遮眼刘海, ja: 目隠れ, en: Hair Over Eyes}
+          - {key: center-parted, zh: 中分, ja: センター分け, en: Center Parted}
+          - {key: sidelocks, zh: 鬓发, ja: 触角ヘア, en: Sidelocks}
+          - {key: ahoge, zh: 呆毛, ja: アホ毛, en: Ahoge}
+          - {key: straight-hair, zh: 直发, ja: ストレート, en: Straight Hair}
+          - {key: curly-hair, zh: 卷发, ja: カール, en: Curly Hair}
+          - {key: wavy-hair, zh: 波浪发, ja: ウェーブヘア, en: Wavy Hair}
+          - {key: messy-hair, zh: 乱发, ja: ボサボサ髪, en: Messy Hair}
+
+  - key: eyes
+    domain: appearance
+    zh: 眼睛
+    ja: 目
+    en: Eyes
+    groups:
+      - key: eye-color
+        zh: 瞳色
+        ja: 瞳の色
+        en: Eye Color
+        featured: true
+        attributes:
+          - {key: black-eyes, zh: 黑瞳, ja: 黒い瞳, en: Black Eyes, swatch: "#2c2c33"}
+          - {key: brown-eyes, zh: 棕瞳, ja: 茶色の瞳, en: Brown Eyes, swatch: "#7c5338"}
+          - {key: red-eyes, zh: 红瞳, ja: 赤い瞳, en: Red Eyes, swatch: "#c13c3c"}
+          - {key: orange-eyes, zh: 橙瞳, ja: 橙色の瞳, en: Orange Eyes, swatch: "#df8640"}
+          - {key: yellow-eyes, zh: 黄瞳, ja: 金色の瞳, en: Yellow Eyes, swatch: "#e0be4a"}
+          - {key: blue-eyes, zh: 蓝瞳, ja: 青い瞳, en: Blue Eyes, swatch: "#4f7fcf"}
+          - {key: green-eyes, zh: 绿瞳, ja: 緑の瞳, en: Green Eyes, swatch: "#4f9a6a"}
+          - {key: purple-eyes, zh: 紫瞳, ja: 紫の瞳, en: Purple Eyes, swatch: "#8964bd"}
+          - {key: pink-eyes, zh: 粉瞳, ja: ピンクの瞳, en: Pink Eyes, swatch: "#e591b2"}
+          - {key: grey-eyes, zh: 灰瞳, ja: 灰色の瞳, en: Grey Eyes, swatch: "#8b8f98"}
+          - {key: heterochromia, zh: 异色瞳, ja: オッドアイ, en: Heterochromia}
+      - key: eye-shape
+        zh: 眼型
+        ja: 目の形
+        en: Eye Shape
+        attributes:
+          - {key: tsurime, zh: 吊眼, ja: ツリ目, en: Tsurime}
+          - {key: tareme, zh: 下垂眼, ja: タレ目, en: Tareme}
+          - {key: narrow-eyes, zh: 细长眼, ja: 細目, en: Narrow Eyes}
+          - {key: round-eyes, zh: 圆眼, ja: 丸目, en: Round Eyes}
+          - {key: sanpaku, zh: 三白眼, ja: 三白眼, en: Sanpaku Eyes}
+          - {key: jitome, zh: 半睁眼, ja: ジト目, en: Jitome}
+      - key: special-eyes
+        zh: 特殊眼部
+        ja: 特殊な目
+        en: Special Eyes
+        attributes:
+          - {key: star-pupils, zh: 星形瞳, ja: 星形の瞳, en: Star Pupils}
+          - {key: heart-pupils, zh: 心形瞳, ja: ハート目, en: Heart Pupils}
+          - {key: slit-pupils, zh: 竖瞳, ja: 縦長の瞳孔, en: Slit Pupils}
+          - {key: special-pupils, zh: 特殊瞳孔, ja: 特殊な瞳孔, en: Unusual Pupils}
+          - {key: glowing-eyes, zh: 发光眼, ja: 光る目, en: Glowing Eyes}
+          - {key: one-eyed, zh: 独眼, ja: 隻眼, en: One-eyed}
+
+  - key: face
+    domain: appearance
+    zh: 面部
+    ja: 顔
+    en: Face
+    groups:
+      - key: facial-features
+        zh: 面部特征
+        ja: 顔の特徴
+        en: Facial Features
+        attributes:
+          - {key: freckles, zh: 雀斑, ja: そばかす, en: Freckles}
+          - {key: beauty-mark, zh: 泪痣, ja: 泣きぼくろ, en: Beauty Mark}
+          - {key: facial-mole, zh: 其他面部痣, ja: ほくろ, en: Facial Mole}
+          - {key: facial-scar, zh: 面部伤疤, ja: 顔の傷, en: Facial Scar}
+          - {key: facial-markings, zh: 面纹, ja: 顔の紋様, en: Facial Markings}
+          - {key: thick-eyebrows, zh: 粗眉, ja: 太眉, en: Thick Eyebrows}
+          - {key: fangs, zh: 尖牙, ja: 牙, en: Fangs}
+          - {key: snaggletooth, zh: 虎牙, ja: 八重歯, en: Snaggletooth}
+      - key: ear-features
+        zh: 耳部特征
+        ja: 耳の特徴
+        en: Ears
+        attributes:
+          - {key: pointy-ears, zh: 尖耳, ja: 尖り耳, en: Pointy Ears}
+          - {key: long-ears, zh: 长耳, ja: 長耳, en: Long Ears}
+          - {key: animal-ears, zh: 兽耳, ja: 獣耳, en: Animal Ears}
+          - {key: cat-ears, zh: 猫耳, ja: 猫耳, en: Cat Ears, parent: animal-ears}
+          - {key: fox-ears, zh: 狐耳, ja: 狐耳, en: Fox Ears, parent: animal-ears}
+          - {key: dog-ears, zh: 犬耳, ja: 犬耳, en: Dog Ears, parent: animal-ears}
+          - {key: rabbit-ears, zh: 兔耳, ja: ウサミミ, en: Rabbit Ears, parent: animal-ears}
+      - key: face-other
+        zh: 其他
+        ja: その他
+        en: Other
+        attributes:
+          - {key: face-covered, zh: 面部遮挡, ja: 顔隠し, en: Face Covered}
+          - {key: shark-teeth, zh: 特殊牙齿, ja: ギザ歯, en: Shark Teeth}
+
+  - key: body
+    domain: appearance
+    zh: 身体
+    ja: 体
+    en: Body
+    groups:
+      - key: body-type
+        zh: 体型
+        ja: 体型
+        en: Body Type
+        attributes:
+          - {key: petite, zh: 娇小, ja: 小柄, en: Petite}
+          - {key: slender, zh: 纤细, ja: スレンダー, en: Slender}
+          - {key: average-build, zh: 匀称, ja: 標準体型, en: Average Build}
+          - {key: voluptuous, zh: 丰满, ja: グラマー, en: Voluptuous}
+          - {key: muscular, zh: 肌肉型, ja: 筋肉質, en: Muscular}
+          - {key: chubby, zh: 肥胖, ja: ぽっちゃり, en: Chubby}
+      - key: height-proportion
+        zh: 身高与比例
+        ja: 身長・体格
+        en: Height & Proportion
+        attributes:
+          - {key: short-stature, zh: 矮个子, ja: 低身長, en: Short}
+          - {key: tall, zh: 高个子, ja: 高身長, en: Tall}
+          - {key: long-legs, zh: 长腿, ja: 脚長, en: Long Legs}
+      - key: skin-tone
+        zh: 肤色
+        ja: 肌の色
+        en: Skin Tone
+        attributes:
+          - {key: fair-skin, zh: 白皙, ja: 色白, en: Fair Skin, swatch: "#f5e6dc"}
+          - {key: tan-skin, zh: 小麦色, ja: 小麦色の肌, en: Tan Skin, swatch: "#d3a275"}
+          - {key: dark-skin, zh: 深肤色, ja: 褐色肌, en: Dark Skin, swatch: "#8a5b40"}
+          - {key: unusual-skin, zh: 特殊肤色, ja: 特殊な肌色, en: Unusual Skin Color}
+      - key: body-marks
+        zh: 身体标记
+        ja: 体の印
+        en: Body Marks
+        attributes:
+          - {key: tattoo, zh: 纹身, ja: タトゥー, en: Tattoo}
+          - {key: body-scar, zh: 伤疤, ja: 傷跡, en: Scar}
+          - {key: birthmark, zh: 胎记, ja: あざ, en: Birthmark}
+          - {key: body-mole, zh: 痣, ja: ほくろ, en: Mole}
+          - {key: special-patterns, zh: 特殊纹路, ja: 紋様, en: Special Markings}
+      - key: nonhuman-traits
+        zh: 非人特征
+        ja: 人外の特徴
+        en: Non-human Traits
+        attributes:
+          - {key: tail, zh: 尾巴, ja: 尻尾, en: Tail}
+          - {key: wings, zh: 翅膀, ja: 翼, en: Wings}
+          - {key: horns, zh: 角, ja: 角, en: Horns}
+          - {key: scales, zh: 鳞片, ja: 鱗, en: Scales}
+          - {key: halo, zh: 光环, ja: 天使の輪, en: Halo}
+          - {key: mechanical-limbs, zh: 机械义肢, ja: 機械の義肢, en: Mechanical Limbs}
+
+  - key: headwear
+    domain: appearance
+    zh: 头饰与发饰
+    ja: 頭飾り・髪飾り
+    en: Headwear
+    groups:
+      - key: hair-accessories
+        zh: 发饰
+        ja: 髪飾り
+        en: Hair Accessories
+        attributes:
+          - {key: hair-ring, zh: 发环, ja: ヘアリング, en: Hair Ring}
+          - {key: scrunchie, zh: 发圈, ja: シュシュ, en: Scrunchie}
+          - {key: headband, zh: 发带, ja: ヘアバンド, en: Headband}
+          - {key: hair-clip, zh: 发夹, ja: ヘアクリップ, en: Hair Clip}
+          - {key: hairpin, zh: 发卡, ja: ヘアピン, en: Hairpin}
+          - {key: hairband, zh: 发箍, ja: カチューシャ, en: Hairband}
+          - {key: hair-tie, zh: 发绳, ja: ヘアゴム, en: Hair Tie}
+          - {key: hair-ribbon, zh: 蝴蝶结, ja: リボン, en: Hair Ribbon}
+      - key: hats
+        zh: 帽类
+        ja: 帽子
+        en: Hats
+        attributes:
+          - {key: beret, zh: 贝雷帽, ja: ベレー帽, en: Beret}
+          - {key: baseball-cap, zh: 棒球帽, ja: キャップ, en: Baseball Cap}
+          - {key: top-hat, zh: 礼帽, ja: シルクハット, en: Top Hat}
+          - {key: sun-hat, zh: 遮阳帽, ja: 麦わら帽子, en: Sun Hat}
+          - {key: hood, zh: 兜帽, ja: フード, en: Hood}
+          - {key: witch-hat, zh: 魔女帽, ja: 魔女帽子, en: Witch Hat}
+      - key: special-headwear
+        zh: 特殊头饰
+        ja: 特殊な頭飾り
+        en: Special Headwear
+        attributes:
+          - {key: crown, zh: 王冠, ja: 王冠, en: Crown}
+          - {key: veil, zh: 头纱, ja: ヴェール, en: Veil}
+          - {key: flower-ornament, zh: 花饰, ja: 花飾り, en: Flower Ornament}
+          - {key: horn-ornament, zh: 角状装饰, ja: 角飾り, en: Horn Ornament}
+          - {key: maid-headdress, zh: 女仆头饰, ja: ホワイトブリム, en: Maid Headdress}
+          - {key: headphones, zh: 头戴耳机, ja: ヘッドホン, en: Headphones}
+
+  - key: clothing
+    domain: appearance
+    zh: 服装
+    ja: 服装
+    en: Clothing
+    groups:
+      - key: tops
+        zh: 上装
+        ja: トップス
+        en: Tops
+        attributes:
+          - {key: shirt, zh: 衬衫, ja: シャツ, en: Shirt}
+          - {key: t-shirt, zh: T恤, ja: Tシャツ, en: T-shirt}
+          - {key: sweater, zh: 毛衣, ja: セーター, en: Sweater}
+          - {key: cardigan, zh: 开衫, ja: カーディガン, en: Cardigan}
+          - {key: hoodie, zh: 连帽衫, ja: パーカー, en: Hoodie}
+          - {key: vest, zh: 背心, ja: ベスト, en: Vest}
+          - {key: jacket, zh: 夹克, ja: ジャケット, en: Jacket}
+          - {key: coat, zh: 外套, ja: コート, en: Coat}
+          - {key: off-shoulder-top, zh: 露肩装, ja: オフショルダー, en: Off-shoulder Top}
+      - key: bottoms
+        zh: 下装
+        ja: ボトムス
+        en: Bottoms
+        attributes:
+          - {key: pleated-skirt, zh: 百褶裙, ja: プリーツスカート, en: Pleated Skirt}
+          - {key: miniskirt, zh: 短裙, ja: ミニスカート, en: Miniskirt}
+          - {key: long-skirt, zh: 长裙, ja: ロングスカート, en: Long Skirt}
+          - {key: shorts, zh: 短裤, ja: ショートパンツ, en: Shorts}
+          - {key: trousers, zh: 长裤, ja: 長ズボン, en: Trousers}
+          - {key: hot-pants, zh: 热裤, ja: ホットパンツ, en: Hot Pants}
+      - key: outfits
+        zh: 连体与套装
+        ja: ワンピース・衣装
+        en: Outfits
+        attributes:
+          - {key: school-uniform, zh: 校服, ja: 制服, en: School Uniform}
+          - {key: sailor-uniform, zh: 水手服, ja: セーラー服, en: Sailor Uniform, parent: school-uniform}
+          - {key: blazer-uniform, zh: 西装校服, ja: ブレザー, en: Blazer Uniform, parent: school-uniform}
+          - {key: maid-outfit, zh: 女仆装, ja: メイド服, en: Maid Outfit}
+          - {key: kimono, zh: 和服, ja: 着物, en: Kimono}
+          - {key: yukata, zh: 浴衣, ja: 浴衣, en: Yukata, parent: kimono}
+          - {key: miko-outfit, zh: 巫女服, ja: 巫女装束, en: Miko Outfit}
+          - {key: dress, zh: 连衣裙, ja: ワンピース, en: Dress}
+          - {key: qipao, zh: 旗袍, ja: チャイナドレス, en: Qipao}
+          - {key: formal-dress, zh: 礼服, ja: ドレス, en: Formal Dress}
+          - {key: gothic-lolita, zh: 哥特萝莉, ja: ゴスロリ, en: Gothic Lolita}
+          - {key: swimsuit, zh: 泳装, ja: 水着, en: Swimsuit}
+          - {key: suit, zh: 西装, ja: スーツ, en: Suit}
+          - {key: lab-coat, zh: 白大褂, ja: 白衣, en: Lab Coat}
+          - {key: military-uniform, zh: 军装, ja: 軍服, en: Military Uniform}
+          - {key: battle-suit, zh: 战斗服, ja: 戦闘服, en: Battle Suit}
+          - {key: armor, zh: 盔甲, ja: 鎧, en: Armor}
+      - key: sleeves-neckline
+        zh: 袖口与领口
+        ja: 袖・襟
+        en: Sleeves & Neckline
+        attributes:
+          - {key: long-sleeves, zh: 长袖, ja: 長袖, en: Long Sleeves}
+          - {key: short-sleeves, zh: 短袖, ja: 半袖, en: Short Sleeves}
+          - {key: sleeveless, zh: 无袖, ja: ノースリーブ, en: Sleeveless}
+          - {key: oversized-sleeves, zh: 萌袖, ja: 萌え袖, en: Sleeves Past Fingers}
+          - {key: detached-sleeves, zh: 分离袖, ja: 付け袖, en: Detached Sleeves}
+          - {key: high-collar, zh: 高领, ja: ハイネック, en: High Collar}
+          - {key: bare-shoulders, zh: 露肩, ja: 肩出し, en: Bare Shoulders}
+          - {key: backless, zh: 露背, ja: 背中開き, en: Backless}
+
+  - key: legwear
+    domain: appearance
+    zh: 腿部与鞋袜
+    ja: 脚・靴
+    en: Legwear & Footwear
+    groups:
+      - key: socks
+        zh: 袜类
+        ja: 靴下
+        en: Socks
+        attributes:
+          - {key: ankle-socks, zh: 短袜, ja: くるぶしソックス, en: Ankle Socks}
+          - {key: crew-socks, zh: 中筒袜, ja: クルーソックス, en: Crew Socks}
+          - {key: knee-socks, zh: 及膝袜, ja: ハイソックス, en: Knee Socks}
+          - {key: thigh-highs, zh: 过膝袜, ja: ニーハイソックス, en: Thigh-highs}
+          - {key: pantyhose, zh: 连裤袜, ja: パンスト, en: Pantyhose}
+          - {key: stockings, zh: 丝袜, ja: ストッキング, en: Stockings}
+      - key: sock-styles
+        zh: 袜子颜色与样式
+        ja: 靴下の色・柄
+        en: Sock Color & Pattern
+        attributes:
+          - {key: black-stockings, zh: 黑丝袜, ja: 黒スト, en: Black Stockings, parent: stockings}
+          - {key: white-stockings, zh: 白丝袜, ja: 白スト, en: White Stockings, parent: stockings}
+          - {key: striped-socks, zh: 条纹袜, ja: ボーダーソックス, en: Striped Socks}
+          - {key: fishnets, zh: 网袜, ja: 網タイツ, en: Fishnets}
+          - {key: mismatched-socks, zh: 双色袜, ja: 左右非対称ソックス, en: Mismatched Socks}
+          - {key: zettai-ryouiki, zh: 绝对领域, ja: 絶対領域, en: Zettai Ryouiki}
+      - key: shoes
+        zh: 鞋类
+        ja: 靴
+        en: Shoes
+        attributes:
+          - {key: loafers, zh: 皮鞋, ja: ローファー, en: Loafers}
+          - {key: mary-janes, zh: 玛丽珍鞋, ja: ストラップシューズ, en: Mary Janes}
+          - {key: sneakers, zh: 运动鞋, ja: スニーカー, en: Sneakers}
+          - {key: long-boots, zh: 长靴, ja: ロングブーツ, en: Long Boots}
+          - {key: ankle-boots, zh: 短靴, ja: ショートブーツ, en: Ankle Boots}
+          - {key: high-heels, zh: 高跟鞋, ja: ハイヒール, en: High Heels}
+          - {key: sandals, zh: 凉鞋, ja: サンダル, en: Sandals}
+          - {key: geta, zh: 木屐, ja: 下駄, en: Geta}
+          - {key: barefoot, zh: 赤脚, ja: 裸足, en: Barefoot}
+      - key: leg-accessories
+        zh: 腿部装饰
+        ja: 脚のアクセサリー
+        en: Leg Accessories
+        attributes:
+          - {key: thigh-ring, zh: 腿环, ja: 太ももリング, en: Thigh Ring}
+          - {key: garter, zh: 腿带, ja: ガーター, en: Garter}
+          - {key: anklet, zh: 脚链, ja: アンクレット, en: Anklet}
+          - {key: leg-bandages, zh: 腿部绷带, ja: 脚の包帯, en: Leg Bandages}
+
+  - key: accessories
+    domain: appearance
+    zh: 其他饰品与装饰
+    ja: アクセサリー
+    en: Accessories
+    groups:
+      - key: eyewear
+        zh: 眼部饰品
+        ja: アイウェア
+        en: Eyewear
+        attributes:
+          - {key: glasses, zh: 眼镜, ja: 眼鏡, en: Glasses}
+          - {key: monocle, zh: 单片眼镜, ja: 片眼鏡, en: Monocle}
+          - {key: sunglasses, zh: 墨镜, ja: サングラス, en: Sunglasses}
+          - {key: goggles, zh: 护目镜, ja: ゴーグル, en: Goggles}
+          - {key: eyepatch, zh: 眼罩, ja: 眼帯, en: Eyepatch}
+      - key: ear-accessories
+        zh: 耳部饰品
+        ja: 耳飾り
+        en: Ear Accessories
+        attributes:
+          - {key: earrings, zh: 耳环, ja: イヤリング, en: Earrings}
+          - {key: ear-studs, zh: 耳钉, ja: ピアス, en: Ear Studs}
+          - {key: drop-earrings, zh: 耳坠, ja: 揺れるイヤリング, en: Drop Earrings}
+      - key: neckwear
+        zh: 颈部饰品
+        ja: 首飾り
+        en: Neckwear
+        attributes:
+          - {key: necklace, zh: 项链, ja: ネックレス, en: Necklace}
+          - {key: choker, zh: 项圈, ja: チョーカー, en: Choker}
+          - {key: scarf, zh: 围巾, ja: マフラー, en: Scarf}
+          - {key: necktie, zh: 领带, ja: ネクタイ, en: Necktie}
+          - {key: bowtie, zh: 领结, ja: 蝶ネクタイ, en: Bowtie}
+          - {key: neck-ribbon, zh: 丝带, ja: リボンタイ, en: Neck Ribbon}
+      - key: hand-accessories
+        zh: 手部饰品
+        ja: 手のアクセサリー
+        en: Hand Accessories
+        attributes:
+          - {key: gloves, zh: 手套, ja: 手袋, en: Gloves}
+          - {key: fingerless-gloves, zh: 露指手套, ja: 指ぬきグローブ, en: Fingerless Gloves, parent: gloves}
+          - {key: ring, zh: 戒指, ja: 指輪, en: Ring}
+          - {key: bracelet, zh: 手链, ja: ブレスレット, en: Bracelet}
+          - {key: wristband, zh: 腕带, ja: リストバンド, en: Wristband}
+      - key: other-accessories
+        zh: 其他
+        ja: その他
+        en: Other
+        attributes:
+          - {key: belt, zh: 腰带, ja: ベルト, en: Belt}
+          - {key: backpack, zh: 背包, ja: リュック, en: Backpack}
+          - {key: cape, zh: 披风, ja: マント, en: Cape}
+          - {key: mask, zh: 面具, ja: 仮面, en: Mask}
+          - {key: bandages, zh: 绷带, ja: 包帯, en: Bandages}
+          - {key: apron, zh: 围裙, ja: エプロン, en: Apron}
+          - {key: carries-sword, zh: 佩剑, ja: 帯刀, en: Carries a Sword}
+
+  - key: impression
+    domain: appearance
+    zh: 整体形象与视觉印象
+    ja: 全体の印象
+    en: Overall Impression
+    groups:
+      - key: apparent-age
+        zh: 表观年龄
+        ja: 見た目の年齢
+        en: Apparent Age
+        attributes:
+          - {key: child-looking, zh: 儿童外观, ja: 子供の見た目, en: Looks Like a Child}
+          - {key: teen-looking, zh: 少年少女外观, ja: 十代の見た目, en: Looks Like a Teen}
+          - {key: young-adult-looking, zh: 青年外观, ja: 青年の見た目, en: Looks Like a Young Adult}
+          - {key: adult-looking, zh: 成年外观, ja: 大人の見た目, en: Looks Like an Adult}
+          - {key: elderly-looking, zh: 老年外观, ja: 老年の見た目, en: Looks Elderly}
+      - key: visual-impression
+        zh: 视觉印象
+        ja: 印象
+        en: Visual Impression
+        attributes:
+          - {key: youthful, zh: 幼态, ja: 幼げ, en: Youthful}
+          - {key: mature-look, zh: 成熟感, ja: 大人っぽい, en: Mature}
+          - {key: androgynous, zh: 中性外观, ja: 中性的, en: Androgynous}
+          - {key: cute-style, zh: 可爱系, ja: 可愛い系, en: Cute}
+          - {key: cool-style, zh: 帅气系, ja: かっこいい系, en: Cool}
+          - {key: refined, zh: 清秀, ja: 清楚, en: Refined}
+          - {key: elegant, zh: 优雅, ja: 上品, en: Elegant}
+          - {key: seductive, zh: 妖艳, ja: 妖艶, en: Seductive}
+          - {key: sickly, zh: 病弱感, ja: 病弱, en: Sickly}
+          - {key: gloomy-look, zh: 阴郁感, ja: 陰のある, en: Gloomy}
+          - {key: delinquent-look, zh: 不良感, ja: ヤンキー風, en: Delinquent}
+
+  # ───────────────────────────── 性格 ─────────────────────────────
+  - key: personality
+    domain: personality
+    zh: 性格
+    ja: 性格
+    en: Personality
+    groups:
+      - key: personality-traits
+        zh: 性格特征
+        ja: 性格特性
+        en: Personality Traits
+        attributes:
+          - {key: gentle, zh: 温柔, ja: 優しい, en: Gentle}
+          - {key: introverted, zh: 内向, ja: 内向的, en: Introverted}
+          - {key: extroverted, zh: 外向, ja: 外向的, en: Extroverted}
+          - {key: shy, zh: 害羞, ja: 恥ずかしがり屋, en: Shy}
+          - {key: timid, zh: 胆小, ja: 臆病, en: Timid}
+          - {key: weak-willed, zh: 弱气, ja: 気弱, en: Weak-willed}
+          - {key: obedient, zh: 顺从, ja: 従順, en: Obedient}
+          - {key: low-self-esteem, zh: 自卑, ja: 劣等感, en: Low Self-esteem}
+          - {key: insecure, zh: 缺乏自信, ja: 自信がない, en: Insecure}
+          - {key: aloof, zh: 冷淡, ja: 素っ気ない, en: Aloof}
+          - {key: sharp-tongued, zh: 毒舌, ja: 毒舌, en: Sharp-tongued}
+          - {key: arrogant, zh: 傲慢, ja: 傲慢, en: Arrogant}
+          - {key: proud, zh: 自尊心强, ja: プライドが高い, en: Proud}
+          - {key: sensitive, zh: 敏感, ja: 繊細, en: Sensitive}
+          - {key: crybaby, zh: 爱哭, ja: 泣き虫, en: Crybaby}
+          - {key: dependent, zh: 依赖, ja: 依存的, en: Dependent}
+          - {key: possessive, zh: 占有欲强, ja: 独占欲が強い, en: Possessive}
+          - {key: serious, zh: 认真, ja: 真面目, en: Serious}
+          - {key: responsible, zh: 有责任感, ja: 責任感が強い, en: Responsible}
+          - {key: lazy, zh: 懒散, ja: ものぐさ, en: Lazy}
+          - {key: cheerful, zh: 开朗, ja: 明るい, en: Cheerful}
+          - {key: hot-blooded, zh: 热血, ja: 熱血, en: Hot-blooded}
+          - {key: pessimistic, zh: 悲观, ja: 悲観的, en: Pessimistic}
+          - {key: assertive, zh: 强势, ja: 強気, en: Assertive}
+          - {key: stubborn, zh: 固执, ja: 頑固, en: Stubborn}
+          - {key: calm, zh: 冷静, ja: 冷静, en: Calm}
+          - {key: mischievous, zh: 调皮, ja: いたずら好き, en: Mischievous}
+          - {key: loner, zh: 孤僻, ja: 一匹狼, en: Loner}
+          - {key: mysterious, zh: 神秘, ja: ミステリアス, en: Mysterious}
+      - key: archetypes
+        zh: ACG 人物属性
+        ja: キャラ属性
+        en: Character Archetypes
+        featured: true
+        attributes:
+          - {key: tsundere, zh: 傲娇, ja: ツンデレ, en: Tsundere}
+          - {key: yandere, zh: 病娇, ja: ヤンデレ, en: Yandere}
+          - {key: kuudere, zh: 冷娇, ja: クーデレ, en: Kuudere}
+          - {key: dandere, zh: 怯娇, ja: ダンデレ, en: Dandere}
+          - {key: sanmu, zh: 三无, ja: 無口・無表情・無感情, en: Emotionless}
+          - {key: mukuchi, zh: 无口, ja: 無口, en: Taciturn}
+          - {key: tennen, zh: 天然呆, ja: 天然ボケ, en: Airhead}
+          - {key: haraguro, zh: 腹黑, ja: 腹黒, en: Two-faced}
+          - {key: aochen, zh: 傲沉}
+          - {key: genki, zh: 元气, ja: 元気っ子, en: Genki}
+          - {key: chuunibyou, zh: 中二病, ja: 中二病, en: Chuunibyou}
+          - {key: ojousama, zh: 大小姐系, ja: お嬢様, en: Ojou-sama}
+          - {key: imouto, zh: 妹妹系, ja: 妹系, en: Little Sister Type}
+          - {key: onee-san, zh: 姐姐系, ja: お姉さん系, en: Big Sister Type}
+          - {key: boku-girl, zh: 僕娘, ja: ボクっ娘, en: Boku Girl}
+
+  # ──────────────────────────── 其他属性 ────────────────────────────
+  - key: other
+    domain: other
+    zh: 其他属性
+    ja: その他の属性
+    en: Other Attributes
+    groups:
+      - key: occupation
+        zh: 身份与职业
+        ja: 身分・職業
+        en: Identity & Occupation
+        attributes:
+          - {key: student, zh: 学生, ja: 学生, en: Student}
+          - {key: transfer-student, zh: 转学生, ja: 転校生, en: Transfer Student}
+          - {key: student-council, zh: 学生会成员, ja: 生徒会役員, en: Student Council}
+          - {key: teacher, zh: 教师, ja: 教師, en: Teacher}
+          - {key: idol, zh: 偶像, ja: アイドル, en: Idol}
+          - {key: shopkeeper, zh: 店主, ja: 店主, en: Shopkeeper}
+          - {key: maid, zh: 女仆, ja: メイド, en: Maid}
+          - {key: shrine-maiden, zh: 巫女, ja: 巫女, en: Shrine Maiden}
+          - {key: mage, zh: 魔法师, ja: 魔法使い, en: Mage}
+          - {key: knight, zh: 骑士, ja: 騎士, en: Knight}
+          - {key: adventurer, zh: 冒险者, ja: 冒険者, en: Adventurer}
+          - {key: royalty, zh: 王族, ja: 王族, en: Royalty}
+          - {key: soldier, zh: 军人, ja: 軍人, en: Soldier}
+          - {key: engineer, zh: 技师, ja: 技師, en: Engineer}
+          - {key: detective, zh: 侦探, ja: 探偵, en: Detective}
+          - {key: office-worker, zh: 上班族, ja: 会社員, en: Office Worker}
+      - key: race
+        zh: 种族
+        ja: 種族
+        en: Race
+        attributes:
+          - {key: human, zh: 人类, ja: 人間, en: Human}
+          - {key: elf, zh: 精灵, ja: エルフ, en: Elf}
+          - {key: beastfolk, zh: 兽人, ja: 獣人, en: Beastfolk}
+          - {key: youkai, zh: 妖怪, ja: 妖怪, en: Youkai}
+          - {key: dragon, zh: 龙族, ja: 竜, en: Dragon}
+          - {key: vampire, zh: 吸血鬼, ja: 吸血鬼, en: Vampire}
+          - {key: demon, zh: 恶魔, ja: 悪魔, en: Demon}
+          - {key: angel, zh: 天使, ja: 天使, en: Angel}
+          - {key: ghost, zh: 幽灵, ja: 幽霊, en: Ghost}
+          - {key: android, zh: 人造人, ja: アンドロイド, en: Android}
+      - key: abilities
+        zh: 能力与特长
+        ja: 能力・特技
+        en: Abilities & Skills
+        attributes:
+          - {key: good-cook, zh: 擅长料理, ja: 料理上手, en: Good Cook}
+          - {key: bad-cook, zh: 料理苦手, ja: 料理下手, en: Bad Cook}
+          - {key: magic, zh: 魔法, ja: 魔法, en: Magic}
+          - {key: swordsmanship, zh: 剑术, ja: 剣術, en: Swordsmanship}
+          - {key: athletic, zh: 运动万能, ja: スポーツ万能, en: Athletic}
+          - {key: musical, zh: 擅长音乐, ja: 音楽が得意, en: Musical}
+          - {key: genius, zh: 天才, ja: 天才, en: Genius}
+          - {key: hacker, zh: 电脑高手, ja: ハッカー, en: Hacker}
+          - {key: superhuman-strength, zh: 怪力, ja: 怪力, en: Superhuman Strength}
+          - {key: healing, zh: 治愈能力, ja: 治癒能力, en: Healing}
+          - {key: precognition, zh: 预知, ja: 予知, en: Precognition}
+      - key: hobbies
+        zh: 兴趣与习惯
+        ja: 趣味・習慣
+        en: Hobbies & Habits
+        attributes:
+          - {key: likes-reading, zh: 喜欢阅读, ja: 読書好き, en: Likes Reading}
+          - {key: likes-sweets, zh: 喜欢甜食, ja: 甘党, en: Sweet Tooth}
+          - {key: tea-lover, zh: 爱喝茶, ja: お茶好き, en: Tea Lover}
+          - {key: likes-cats, zh: 喜欢猫, ja: 猫好き, en: Cat Lover}
+          - {key: gamer, zh: 游戏爱好者, ja: ゲーマー, en: Gamer}
+          - {key: otaku, zh: 宅, ja: オタク, en: Otaku}
+          - {key: gardening, zh: 园艺, ja: ガーデニング, en: Gardening}
+          - {key: sleepyhead, zh: 贪睡, ja: 寝坊助, en: Sleepyhead}
+      - key: relationships
+        zh: 人际关系类型
+        ja: 人間関係
+        en: Relationship Types
+        attributes:
+          - {key: childhood-friend, zh: 青梅竹马, ja: 幼馴染, en: Childhood Friend}
+          - {key: senpai, zh: 前辈, ja: 先輩, en: Senpai}
+          - {key: kouhai, zh: 后辈, ja: 後輩, en: Kouhai}
+          - {key: rival, zh: 劲敌, ja: ライバル, en: Rival}
+          - {key: older-sister, zh: 姐姐, ja: 姉, en: Older Sister}
+          - {key: younger-sister, zh: 妹妹, ja: 妹, en: Younger Sister}
+          - {key: younger-brother, zh: 弟弟, ja: 弟, en: Younger Brother}
+          - {key: master-servant, zh: 主从, ja: 主従, en: Master & Servant}
