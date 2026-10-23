@@ -20,6 +20,8 @@ $VenvPython = Join-Path $Venv "Scripts\python.exe"
 $ComposeFile = Join-Path $Root "docker-compose.yml"
 $MinPython = [version]"3.11"
 $MinNode = [version]"20.19"
+# Keep Python's stdout and stderr (Alembic logs) in order.
+$env:PYTHONUNBUFFERED = "1"
 
 function Write-Step([string]$Text) { Write-Host "==> $Text" -ForegroundColor Cyan }
 function Write-Ok([string]$Text) { Write-Host "    $Text" -ForegroundColor Green }
